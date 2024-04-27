@@ -1,0 +1,306 @@
+
+body{
+    font-family: sans-serif;
+    margin: 0;
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 50px; /*El alto del footer*/
+}
+
+nav {
+    background-color: #5F3DC4;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 0;
+  }
+  
+  nav ul { /*Muestra la disposicin de botones para notebook o desktop*/
+    display: flex; 
+    justify-content: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+  }
+  
+  nav li a {  /*Determina la propiedad del texto del botón*/ 
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 5px 16px;
+    text-decoration: none;
+  }
+  
+  nav li a:hover { /*Determina la propiedad al posicionarse en el botón*/
+    background-color: #2d1476;
+  }
+  
+  nav label { /*No muestra el valor de la etiqueta ☰*/
+    display: none;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  .contenedor{
+    display: flex;
+    margin-top: 20px;
+    max-width: 100%;
+    margin: auto;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    }
+  
+  .textodescrip{
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 18px;
+    justify-self: center;
+}
+
+  .button{
+    background-color: #d6336c;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .button a{
+    text-decoration: none;
+    color: white;
+  }
+    .button:hover{
+      background-color: #870e38;
+    }
+  
+
+
+  /* NOSOTROS - TEAM */
+  
+  .team{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .team-contenido{
+    width: 100%;
+    max-width: 1240px;
+    margin: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    text-align: center;
+  }
+  .team-contenido img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  .box{
+    width: 200px;
+    height: auto;
+    background:#2d1476;
+    transition: all .38s ease;
+  }
+  .box h3{
+    font-size: 18 px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  .box h5{
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+  }
+
+  .box:hover{
+    transform: translateY(-10px);
+  }
+  
+/*CONTACTO - FORM*/
+
+form{
+  width: 600px;
+  margin: auto;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+input, textarea {
+width: 100%;
+margin-bottom:20px;
+box-sizing: border-box;
+}
+
+textarea{
+  min-height: 100px;
+  max-height: 200px;
+  max-width: 100%;
+  box-sizing: border-box;  
+}
+
+/*CATÁLOGO*/
+
+.container-img{
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 250px;
+  grid-gap: 30px;
+}
+
+.container-img .box-img a{
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: #2d1476;
+  }
+
+.container-img .box-img figure{
+  max-width: 200px;
+  height: 100%;
+  text-align: center;
+ }
+
+.container-img .box-img figure:hover{
+  transition: all .38s ease;
+  transform: translateY(-10px);
+  opacity: 0.6;
+}
+
+.container-img .box-img img{
+  width: 200px;
+  height: 200px;
+}
+
+/*FOOTER*/
+
+footer{
+  background-color: #2d1476;
+  width: 100%;
+  font-size: 10px;
+  text-align: center;
+  color: #fff;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+}
+
+/* <--------------------------------------RESPONSIVE-------------------------------------->*/
+
+  @media (max-width: 768px) {/*cuando el dispositivo es máximo es de 768px*/
+    
+    /*MENÚ*/
+
+      input:checked ~ ul{ /*muestra el contenido de todas las etiquetas ul*/
+       display: block;
+      }
+      
+      input:checked ~ label { /*muestra todo el contenido de las etiquetas label*/
+       background: #2d1476;
+      }
+      
+      nav li{ /*Determina la propiedad de cada botón para mobile*/
+       margin: 0;
+       text-align: left;
+      }
+      
+      nav label{ /*dibuja la etiqueta label ☰*/
+       box-sizing: border-box;
+       display: flex;
+       /*border-radius: 5px;*/
+       width: 30px;
+       height: 30px;
+       line-height: 30px;
+       font-weight: bold;
+       text-align: center;
+       justify-content: center;
+       user-select: none;
+       /*background-color: cadetblue;*/
+      }
+      
+      nav ul{/*deja de mostrar el bloque contenedor de botones horizontales*/
+        display: none;
+      }
+      
+      nav ul li a{ /**/
+       display: flex;
+       text-decoration: none;
+       color: #fff;
+      }
+      
+      .contenedor{
+       display: block;
+       margin-top: 20px;
+       width: 90%;
+       margin: auto;
+       }
+      
+       /*HOME*/
+
+      .imglogo{ /*logo del home responsive*/
+       text-align: center;
+       }
+      
+      .textodescrip{
+        font-size: 22px;
+        text-align: justify;
+        margin: 5px;
+       }
+      
+      .button{
+        background-color: #d6336c;
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        cursor: pointer;
+        }
+      
+      /*NOSOTROS*/
+
+      .team{
+        width: 100%;
+        height: auto;
+        padding: 90px 2%;
+        flex-direction: column;
+        }
+
+    /*CONTACTO RESPONSIVO*/
+
+    form{
+      width: 100%;
+    }
+
+    /*CATÁLOGO*/
+
+    .container-img{
+      grid-template-columns: repeat(1, 1fr);
+      justify-items: center; 
+    }
+
+    .container-img .box-img figure{
+      height: 200px;
+        
+    }
+}
+      

@@ -3,41 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Los colonos de los juegos</title> <!--Página de empresa familiar que vende juegos de mesa-->
+    <title>Los colonos de los juegos</title> <!--Página de empresa familiar que alquila / vende juegos de mesa-->
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
     <header>
-        <h1>Los colonos de los juegos</h1>
         <nav>
-            <ul>
+                <input type="checkbox" id="menu">
+                <label for="menu">☰</label>
+            
+           <ul>
                 <li><a href="index.htm">INICIO</a></li>
                 <li><a href="nosotros.htm">NOSOTROS</a></li>
                 <li><a href="catalogo.htm">CATÁLOGO</a></li>
-                <li><a href="articulos.htm">ARTÍCULOS</a></li>
-                <li><a href="contacto.htm">CONTACTO</a></li>
-            </ul>
-            
-            <img a src="img/logo.jpg" alt="Logo del sitio" width="200" height="200">
+                <!--<li><a href="articulos.htm">ARTÍCULOS</a></li>-->
+                <li><a href="contacto.htm">CONTACTO</a></li>   
+            </ul>            
         </nav>
+                  
     </header>
 
     <main>
-        <h2>Categorías principales</h2>
-        
-        <nav>
-            <ul>
-                <li><a href="lanzamientos.htm">Lanzamienos</a></li>
-                <li><a href="familiares.htm">Familiares</a></li>
-                <li><a href="estrategia.htm">Estrategia</a></li>
-                <li><a href="paraninos.htm">Para niños</a></li>
-                <li><a href="todoslosjuegos.htm">Todos los juegos</a></li>
-            </ul>
-    
+        <section class="contenedor"> 
+            <div class="imglogo">
+                <img a src="img/logo.jpg" alt="Logo del sitio" width="300" height="300">
+            </div> 
+            <div class="textodescrip">
+                <p><b>Somos una empresa familiar</b> dedicada al alquiler de juegos de mesa con el propósito de integrar a las familias y 
+                    crear momentos únicos a través del juego. 
+                    <br>
+                    <br>Creemos que los juegos de mesa son una herramienta muy valiosa para fortalecer los lazos familiares. Los juegos de mesa nos dan la oportunidad de <b>interactuar, aprender y 
+                        divertirse juntos, creando recuerdos que durarán toda la vida.</b>
+                    </p>
+                    <button class="button">
+                        <a href="nosotros.htm"><b>Conocenos!</a>
+                    </button>
+            </div>   
+            
+        </section>
+   
     </main>
 
     <footer>
-
+        <p>© Todos los derechos reservados | Realizado por nriggio</p>
     </footer>
-
+  
 </body>
 </html>
