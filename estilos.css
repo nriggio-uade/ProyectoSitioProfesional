@@ -8,10 +8,11 @@ body{
 }
 
 nav {
-    background-color: #5F3DC4;
-    color: #fff;
-    font-weight: 600;
-    padding: 10px 0;
+  background: rgb(45,20,118);
+  background: linear-gradient(94deg, rgba(45,20,118,1) 0%, rgba(95,61,196,1) 50%, rgba(116,82,217,1) 100%);  
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 0;
   }
   
   nav ul { /*Muestra la disposicin de botones para notebook o desktop*/
@@ -32,7 +33,8 @@ nav {
   }
   
   nav li a:hover { /*Determina la propiedad al posicionarse en el botón*/
-    background-color: #2d1476;
+    background-color: #d6336c;
+    transition: all .38s ease;
   }
   
   nav label { /*No muestra el valor de la etiqueta ☰*/
@@ -76,11 +78,154 @@ nav {
     text-decoration: none;
     color: white;
   }
-    .button:hover{
+  
+  .button:hover{
       background-color: #870e38;
+      transition: all .38s ease;
     }
   
+    /* Flip-Box*/
+    .flip-box {
+      background-color: transparent;
+      width: 300px;
+      height: 200px;
+      perspective: 1000px;
+      margin: 5px;
+    }
 
+    /* Flip-Box 1*/
+    .flip-box-inner1{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+     }
+    
+    .flip-box:hover .flip-box-inner1 {
+      transform: rotateY(180deg);
+    }
+    
+    .flip-box-front1, .flip-box-back1 {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: 15px; 
+    }
+    
+    .flip-box-front1 {
+      background-image: url(img/Flipbox/Familia-dark.jpg);
+      color: White;
+      text-align: center;
+      align-content: center;
+    }
+    
+    .flip-box-back1 {
+      background: rgb(45,20,118);
+      background: linear-gradient(94deg, rgba(45,20,118,1) 0%, rgba(95,61,196,1) 50%, rgba(116,82,217,1) 100%);  
+      color: #fff;
+      color: white;
+      transform: rotateY(180deg);
+      text-align: center;
+      align-content: center;
+    }
+    .flip-box-back1 p{
+      font-size: 15px;
+      font-weight: 300;
+      padding: 10px;
+    }
+/*Flipbox 2*/
+    .flip-box-inner2{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+     }
+    
+    .flip-box:hover .flip-box-inner2 {
+      transform: rotateY(180deg);
+    }
+    
+    .flip-box-front2, .flip-box-back2 {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: 15px; 
+    }
+    
+    .flip-box-front2 {
+      background-image: url(img/Flipbox/Amigos-dark.jpg);
+      color: White;
+      text-align: center;
+      align-content: center;
+    }
+    
+    .flip-box-back2 {
+      background: rgb(135,14,56);
+      background: linear-gradient(90deg, rgba(135,14,56,1) 0%, rgba(214,51,108,1) 57%, rgba(232,82,135,1) 100%);
+      color: #fff;
+      color: white;
+      transform: rotateY(180deg);
+      text-align: center;
+      align-content: center;
+    }
+    .flip-box-back2 p{
+      font-size: 15px;
+      font-weight: 300;
+      padding: 10px;
+    }
+
+    /*Flipbox 3*/
+    .flip-box-inner3{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+    
+    .flip-box:hover .flip-box-inner3 {
+      transform: rotateY(180deg);
+    }
+    
+    .flip-box-front3, .flip-box-back3 {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: 15px;
+    }
+    
+    .flip-box-front3 {
+      background-image: url(img/Flipbox/Laboral-dark.jpg);
+      color: White;
+      text-align: center;
+      align-content: center;
+    }
+    
+    .flip-box-back3 {
+      background: rgb(45,20,118);
+      background: linear-gradient(94deg, rgba(45,20,118,1) 0%, rgba(95,61,196,1) 50%, rgba(116,82,217,1) 100%);  
+      color: #fff;
+      color: white;
+      transform: rotateY(180deg);
+      text-align: center;
+      align-content: center;
+    }
+    .flip-box-back3 p{
+      font-size: 15px;
+      font-weight: 300;
+      padding: 10px;
+    }
 
   /* NOSOTROS - TEAM */
   
@@ -103,13 +248,16 @@ nav {
   }
   .team-contenido img{
     width: 100%;
+    border-radius: 10px;
     height: auto;
     margin-bottom: 15px;
   }
   .box{
     width: 200px;
     height: auto;
-    background:#2d1476;
+    border-radius: 10px;
+    background: rgb(135,14,56);
+background: linear-gradient(90deg, rgba(135,14,56,1) 0%, rgba(214,51,108,1) 57%, rgba(232,82,135,1) 100%);
     transition: all .38s ease;
   }
   .box h3{
